@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RIUSA.TN – Riciclaggio Pannelli Solari</title>
+  <meta name="description" content="RIUSA.TN – Green Economy & Research. Azienda specializzata nel riciclaggio e riuso dei pannelli solari." />
+  <style>
+    body { margin:0; font-family: Arial, Helvetica, sans-serif; color:#1f2937; line-height:1.6; }
+    header {
+      background: linear-gradient(rgba(15,81,50,0.7), rgba(15,81,50,0.7)), url('sfondo-solare.jpg') center/cover no-repeat;
+      color:white;
+      padding:80px 20px;
+      text-align:center;
+    }
+    header img { max-width:260px; margin-bottom:20px; }
+    section { padding:60px 20px; max-width:1100px; margin:auto; }
+    h2 { color:#0f5132; margin-bottom:20px; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:30px; }
+    .card { background:#f9fafb; border-radius:12px; padding:30px; box-shadow:0 4px 12px rgba(0,0,0,0.05); }
+
+    .gallery { padding-top: 20px; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .gallery-grid img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      background: #e5e7eb;
+    }
+    .gallery-note { color:#6b7280; font-size: 0.95rem; margin-top: 12px; }
+
+    .contact-form { max-width: 900px; }
+    .form-grid { display:grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .contact-form label { display:block; font-weight:700; margin: 10px 0 6px; color:#111827; }
+    .contact-form input, .contact-form textarea {
+      width:100%; padding: 12px 12px; border-radius: 12px;
+      border: 1px solid #d1d5db; background: #fff; font-size: 1rem;
+    }
+    .contact-form input:focus, .contact-form textarea:focus {
+      outline: none; border-color:#16a34a; box-shadow: 0 0 0 4px rgba(22,163,74,0.15);
+    }
+    .form-status { margin-top: 12px; color:#374151; }
+    @media (max-width: 720px) { .form-grid { grid-template-columns: 1fr; } }
+    footer { background:#111827; color:#e5e7eb; padding:40px 20px; }
+    footer a { color:#9ae6b4; text-decoration:none; }
+    .cta { background:#16a34a; color:white; padding:14px 28px; border-radius:999px; display:inline-block; margin-top:20px; }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="RIUSA.TN logo" style="background: rgba(255,255,255,0.85); padding:15px; border-radius:16px;" />
+  <h1>RIUSA.TN</h1>
+  <p>Green Economy & Research</p>
+  <p>Riciclaggio e riuso professionale dei pannelli solari</p>
+</header>
+
+<section>
+  <h2>Chi siamo</h2>
+  <p>
+    RIUSA.TN è un’azienda specializzata nella <strong>gestione sostenibile del fine vita dei pannelli fotovoltaici</strong>.
+    Operiamo secondo i principi dell’economia circolare, promuovendo il recupero dei materiali e il riuso tecnologico.
+  </p>
+</section>
+
+<section>
+  <h2>I nostri servizi</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Riciclaggio pannelli solari</h3>
+      <p>Trattamento e recupero delle componenti dei moduli fotovoltaici secondo normative ambientali.</p>
+    </div>
+    <div class="card">
+      <h3>Riuso e rigenerazione</h3>
+      <p>Valutazione tecnica per il riutilizzo di pannelli ancora funzionanti.</p>
+    </div>
+    <div class="card">
+      <h3>Ricerca e innovazione</h3>
+      <p>Sviluppo di soluzioni per aumentare la sostenibilità del ciclo di vita del fotovoltaico.</p>
+    </div>
+  </div>
+</section>
+
+<section class="gallery">
+  <h2>Fotovoltaico & Riciclo</h2>
+  <p>Immagini dal mondo del fotovoltaico, del recupero e dei processi di trattamento.</p>
+  <div class="gallery-grid">
+    <img src="collage-01.jpg" alt="Pannelli fotovoltaici" />
+    <img src="collage-02.jpg" alt="Pannelli a fine vita" />
+    <img src="collage-03.jpg" alt="Impianto e macchinari di trattamento" />
+    <img src="collage-04.jpg" alt="Riciclo e recupero" />
+    <img src="collage-05.jpg" alt="Fotovoltaico" />
+    <img src="collage-06.jpg" alt="Economia circolare" />
+    <img src="collage-07.jpg" alt="Processi di riciclo" />
+    <img src="collage-08.jpg" alt="Recupero materiali" />
+  </div>
+  
+</section>
+
+<section>
+  <h2>Richiesta informazioni</h2>
+  <p>Compila il form: ti risponderemo il prima possibile.</p>
+
+  <form id="contactForm" class="contact-form">
+    <div class="form-grid">
+      <div>
+        <label for="nome">Nome *</label>
+        <input id="nome" name="nome" type="text" required autocomplete="given-name" />
+      </div>
+      <div>
+        <label for="cognome">Cognome *</label>
+        <input id="cognome" name="cognome" type="text" required autocomplete="family-name" />
+      </div>
+      <div>
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required autocomplete="email" />
+      </div>
+      <div>
+        <label for="telefono">Telefono</label>
+        <input id="telefono" name="telefono" type="tel" autocomplete="tel" />
+      </div>
+      <div style="grid-column: 1 / -1;">
+        <label for="messaggio">Richiesta *</label>
+        <textarea id="messaggio" name="messaggio" rows="5" required placeholder="Descrivi la tua richiesta (quantità, zona, tempistiche, ecc.)"></textarea>
+      </div>
+    </div>
+
+    <button type="submit" class="cta">Invia richiesta</button>
+    <p id="formStatus" class="form-status" aria-live="polite"></p>
+  </form>
+</section>
+
+<section>
+  <h2>Contatti</h2>
+  <p>
+    <strong>Email:</strong> <a href="mailto:info@riusa.tn.it">info@riusa.tn.it</a><br />
+    <strong>Telefono:</strong> <a href="tel:+393478614124">+39 347 861 4124</a>
+  </p>
+  <a class="cta" href="mailto:info@riusa.tn.it">Contattaci</a>
+</section>
+
+<footer>
+  <p>
+    © RIUSA.TN – Green Economy & Research<br />
+    Tutti i diritti riservati
+  </p>
+</footer>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const statusEl = document.getElementById('formStatus');
+
+    if (form) {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        statusEl.textContent = 'Invio in corso…';
+
+        const payload = {
+          nome: form.nome.value.trim(),
+          cognome: form.cognome.value.trim(),
+          email: form.email.value.trim(),
+          telefono: form.telefono.value.trim(),
+          messaggio: form.messaggio.value.trim(),
+        };
+
+        try {
+          const res = await fetch('/api/contact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await res.json().catch(() => ({}));
+
+          if (!res.ok) {
+            throw new Error(data?.error || 'Errore durante l’invio.');
+          }
+
+          statusEl.textContent = '✅ Richiesta inviata correttamente. Ti risponderemo a breve.';
+          form.reset();
+        } catch (err) {
+          statusEl.textContent = '❌ ' + (err?.message || 'Errore durante l’invio. Riprova più tardi o scrivi a info@riusa.tn.it');
+        }
+      });
+    }
+  </script>
+</body>
+</html>
