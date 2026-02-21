@@ -1,0 +1,540 @@
+/* FONT */
+@font-face {
+    font-family: "Work Sans";
+    src: url("font/WorkSans-VariableFont_wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-display: swap;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* BASE */
+body {
+    font-family: "Work Sans", sans-serif;
+    background: #fffffb;
+    color: #1f2b1f;
+    line-height: 1.6;
+}
+
+/* HERO SECTION */
+.hero {
+    background: #b8f5c5;
+    padding: 40px 60px 80px;
+}
+
+/* NAVBAR on the right */
+.nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+    background-color: #fffffb;
+    border-radius: 16px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+
+    position: fixed; /* makes it stick */
+    top: 25px;           /* distance from the top of viewport */
+    z-index: 1000;    /* ensures it stays above content */
+}
+
+.nav h1 {
+    font-size: 41px;
+    font-weight: 700;
+    color: #1f2b1f;
+    padding-right: 15px;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 35vh; /* Ensures the green area feels substantial */
+    padding: 10 4% 0 8%; /* Increased left padding (8%) to nudge text left */
+    box-sizing: border-box;
+    overflow: hidden; /* Clips the extra whitespace of the 1080p image */
+}
+
+.hero-text {
+    opacity: 0; /* Starts invisible */
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-delay: 0.2s; /* Starts slightly after page load */
+}
+
+.hero-graphic img {
+    
+    opacity: 0; /* Starts invisible */
+    animation: fadeInUp 0.8s ease-out forwards;
+    
+    animation-delay: 0.2s; /* Image appears slightly after the text for a "layered" feel */
+
+}
+
+.hero-text {
+    flex: 0 0 55%; 
+    z-index: 10;
+}
+
+.hero-graphic {
+    flex: 0 0 55%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-graphic img {
+    width: 120%; 
+    height: 90%; 
+    height: auto;
+    margin-left: -30%; 
+    pointer-events: none;
+    transition: all 0.3s ease; 
+}
+
+.hero-text h1 {
+    font-size: 54px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+        margin-top: 80px; /* Adds space for the fixed navbar */
+        min-height: auto;
+    }
+
+    .hero-text {
+        flex: 0 0 100%;
+        margin-bottom: -40px; /* Pulls the image "up" into the text area */
+    }
+
+    .hero-graphic {
+        flex: 0 0 100%;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-graphic img {
+        width: 100%;      /* Image scales to phone width */
+        margin-left: 0;   /* Remove the side overlap */
+        margin-top: 0;    /* Adjust as needed for vertical overlap */
+        transform: scale(1.1); /* Slightly enlarge to make it a focal point */
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+
+}
+
+/* BUTTONS */
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #1f2b1f;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.btn-primary:hover {
+    background: #2e402e;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #1f2b1f;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    border: 1px solid #1f2b1f;
+}
+
+.btn-outline:hover {
+    background: #1f2b1f;
+    color: white;
+}
+
+/* SHARED SECTION STYLES */
+.section-label {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #4a6b4a;
+}
+
+/* ABOUT SECTION */
+.about {
+    text-align: center;
+    padding: 100px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about h4 {
+    font-size: 32px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+
+/* SERVICES SECTION */
+.services {
+    padding: 60px 20px 100px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid #e5e5e0;
+    border-radius: 16px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative; 
+    z-index: 1;
+}
+.rocket-icon {
+    position: absolute;
+    top: -150px;          /* Pushes it up outside the card */
+    right: -290px;        /* Pushes it right outside the card */
+    width: 400px;        /* Adjust size of your rocket here */
+    z-index: -1;         /* Puts it BEHIND the card's white background */
+    transform: rotate(15deg); /* Optional: gives it a little tilt */
+    pointer-events: none; /* Prevents the image from blocking text selection */
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.card p {
+    font-size: 15px;
+    color: #4b5563;
+}
+
+/* GALLERY SECTION */
+.gallery {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.gallery-subtitle {
+    margin-bottom: 40px;
+    font-size: 16px;
+    color: #4b5563;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 16px;
+    background: #f3f4f6;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}
+
+/* CONTACT SECTION */
+.contact {
+    background: #f4f5f0;
+    padding: 100px 20px;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+}
+
+.contact-info h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.info-details p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-details a {
+    color: #1f2b1f;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-form-wrapper {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+
+.contact-form-wrapper > p {
+    margin-bottom: 24px;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 24px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    font-family: inherit;
+    font-size: 15px;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus, 
+.input-group textarea:focus {
+    outline: none;
+    border-color: #b8f5c5;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(184, 245, 197, 0.4);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-status {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* FOOTER */
+footer {
+    background: #1f2b1f;
+    color: #fffffb;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-content a {
+    color: #b8f5c5;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Animation for the text */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- NUOVI STILI ABOUT (Chi Siamo) --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    text-align: left;
+}
+
+.about-card {
+    background: #f4f5f0;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    border: 1px solid #e5e5e0;
+    transition: transform 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.about-card h3 {
+    color: #4a6b4a;
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.about-card p {
+    font-size: 15px;
+    color: #4b5563;
+}
+
+/* --- NUOVI STILI SERVIZI (Smaltimento) --- */
+.smaltimento-section {
+    margin-top: 80px;
+    background: #ffffff;
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid #e5e5e0;
+    text-align: center;
+}
+
+.smaltimento-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.smaltimento-subtitle {
+    font-size: 18px;
+    color: #4b5563;
+    margin-bottom: 40px;
+}
+
+.workflow-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.workflow-step img {
+
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    border: 1px solid #e5e5e0;
+    transition: transform 0.3s ease;
+}
+
+.workflow-step:hover img {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.workflow-step h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #1f2b1f;
+}
+
+/* Aggiornamento Responsive */
+@media (max-width: 900px) {
+    .smaltimento-section {
+        padding: 40px 20px;
+    }
+    
+    .about-card {
+        text-align: center;
+    }
+}
