@@ -53,7 +53,12 @@ body {
 }
 
 .logo img {
-    width: 200px;
+    width: 35vw; 
+    padding:10px; 
+    background: #fffffb; 
+    border-radius:16px; 
+    padding-bottom: 30px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .menu {
@@ -100,6 +105,7 @@ body {
     z-index: 10;
 }
 
+
 .hero-graphic {
     flex: 0 0 55%;
     display: flex;
@@ -130,12 +136,17 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .hero {
+        padding: 10px 10px 10px;
+    }
+
     .hero-content {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding: 60px 20px;
-        margin-top: 80px; /* Adds space for the fixed navbar */
+        padding: 20px 20px;
+        margin-top: 0px; /* Adds space for the fixed navbar */
         min-height: auto;
     }
 
@@ -146,6 +157,7 @@ body {
 
     .hero-graphic {
         flex: 0 0 100%;
+        padding-top: 50px;
         width: 100%;
         justify-content: center;
     }
@@ -158,10 +170,28 @@ body {
     }
 
     .nav {
+        background-color: #b8f5c5;
+        box-shadow: none;
         flex-direction: column;
-        gap: 15px;
-        padding: 15px 20px;
+        position: static;
+        size: 100%;
+        padding: 20px 0;
+        margin-bottom:0px;
     }
+
+    .nav h1 {
+        font-size: 35px;
+    }
+
+    .logo img {
+        width: 70vw; 
+        padding:10px; 
+        background: #fffffb; 
+        border-radius:16px; 
+        padding-bottom: 30px; 
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    
 
 }
 
@@ -249,6 +279,7 @@ button {
     position: relative; 
     z-index: 1;
 }
+
 .rocket-icon {
     position: absolute;
     top: -150px;          /* Pushes it up outside the card */
@@ -257,6 +288,14 @@ button {
     z-index: -1;         /* Puts it BEHIND the card's white background */
     transform: rotate(15deg); /* Optional: gives it a little tilt */
     pointer-events: none; /* Prevents the image from blocking text selection */
+}
+
+@media (max-width: 900px) {
+    .rocket-icon {
+        top: -60.5px;       /* Adjust for smaller screens */
+        right: 5px;     /* Adjust for smaller screens */
+        width: 250px;      /* Adjust size for smaller screens */
+    }
 }
 
 
@@ -400,6 +439,35 @@ button {
     margin-top: 16px;
     font-size: 14px;
     font-weight: 500;
+}
+
+/* --- RESPONSIVE CONTATTI (Mobile) --- */
+@media (max-width: 768px) {
+    /* Riduce lo spazio generale della sezione su mobile */
+    .contact {
+        padding: 60px 20px;
+    }
+
+    /* Impila le informazioni di contatto e il form verticalmente */
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    /* Riduce lo spazio interno del riquadro del form su schermi piccoli */
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+
+    /* Impila i campi del form (Nome, Cognome, ecc.) uno sotto l'altro */
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Centra il testo delle informazioni di contatto per un look migliore su mobile */
+    .contact-info {
+        text-align: center;
+    }
 }
 
 /* FOOTER */
