@@ -20,6 +20,31 @@ body {
     background: #fffffb;
     color: #1f2b1f;
     line-height: 1.6;
+    overflow-x: hidden;
+}
+.hero_lang_select {
+    position: relative; /* Anchor for the absolute image */
+    width: 100%;        /* Or a specific width if it's in a sidebar */
+
+    min-height: 120px;  /* Ensure the container has height so the image isn't invisible */
+}
+
+
+.hero_lang_select img{
+    position: absolute;
+    display:block;
+    top:-20px;
+    right: 0px;
+    width: 210px;
+
+}
+
+.hero_lang_select img:hover {
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+    transform: scale(1.05);
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    
 }
 
 /* HERO SECTION */
@@ -136,6 +161,16 @@ body {
 }
 
 @media (max-width: 768px) {
+
+    .hero_lang_select {
+        min-height: 50px;  /* Adjust height for smaller screens */
+    }
+
+    .hero_lang_select img{
+        top: -15px;
+        right: 0px;
+        width: 120px;
+    }
 
     .hero {
         padding: 10px 10px 10px;
