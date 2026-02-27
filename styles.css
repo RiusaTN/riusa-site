@@ -295,7 +295,7 @@ button {
 .about {
     text-align: center;
     padding: 100px 20px;
-    max-width: 900px;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -654,5 +654,9 @@ footer {
     
     .about-card {
         text-align: center;
+    }
+
+    .about {
+        max-width: 90%;
     }
 }
