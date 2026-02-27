@@ -120,28 +120,29 @@ body {
     
     opacity: 0; /* Starts invisible */
     animation: fadeInUp 0.8s ease-out forwards;
-    
     animation-delay: 0.2s; /* Image appears slightly after the text for a "layered" feel */
 
 }
 
 .hero-text {
     flex: 0 0 55%; 
+    position: relative;
     z-index: 10;
 }
 
-
 .hero-graphic {
+    
     flex: 0 0 55%;
     display: flex;
     justify-content: flex-end;
 }
 
 .hero-graphic img {
-    width: 120%; 
-    height: 90%; 
+    width: 130%; 
+    height: auto; 
     height: auto;
-    margin-left: -30%; 
+    margin-top: -110px;
+    margin-left: -55%; 
     pointer-events: none;
     transition: all 0.3s ease; 
 }
@@ -158,6 +159,11 @@ body {
     font-size: 18px;
     margin-bottom: 30px;
     opacity: 0.9;
+}
+
+.hero-text button {
+    font-size: 40px;
+    padding: 20px 40px;
 }
 
 @media (max-width: 768px) {
@@ -188,6 +194,15 @@ body {
     .hero-text {
         flex: 0 0 100%;
         margin-bottom: -40px; /* Pulls the image "up" into the text area */
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text button{
+        font-size: 20px;
+        padding: 12px 24px;
     }
 
     .hero-graphic {
